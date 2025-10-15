@@ -18,9 +18,7 @@ You must **complete each function** so that all tests pass.
 ## How to Run the Tests
 
 1. Make sure you have **Python 3** installed.
-2. Open your terminal and navigate to the project folder:
+2. Open your terminal and navigate to the project folder
+3. Run:
    ```bash
-   cd beginner_python_test
    python -m unittest tests/fundamentals_tests.py
-```
-
