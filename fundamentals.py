@@ -1,3 +1,4 @@
+import math 
 def add_numbers(a, b):
     """
     Problem 1:
@@ -8,8 +9,7 @@ def add_numbers(a, b):
     >>> add_numbers(2, 3)
     5
     """
-    # TODO: Write your code below
-    pass
+    return (a + b)
 
 
 def is_even(n):
@@ -23,8 +23,10 @@ def is_even(n):
     >>> is_even(5)
     False
     """
-    # TODO: Write your code below
-    pass
+    if n % 2 == 0:
+        return True
+    else:
+        return False
 
 
 def count_vowels(word):
@@ -38,8 +40,12 @@ def count_vowels(word):
     >>> count_vowels("Hello")
     2
     """
-    # TODO: Write your code below
-    pass
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for c in word:
+        if c.lower() in vowels:
+            count += 1
+    return count
 
 
 def find_max(numbers):
@@ -51,8 +57,7 @@ def find_max(numbers):
     >>> find_max([1, 4, 2, 10])
     10
     """
-    # TODO: Write your code below
-    pass
+    return max(numbers)
 
 
 def reverse_string(s):
@@ -64,8 +69,7 @@ def reverse_string(s):
     >>> reverse_string("cat")
     'tac'
     """
-    # TODO: Write your code below
-    pass
+    return s[::-1]
 
 
 def average(numbers):
@@ -80,8 +84,12 @@ def average(numbers):
     >>> average([])
     0
     """
-    # TODO: Write your code below
-    pass
+    
+    if numbers:
+        average = sum(numbers)/len(numbers)
+        return average
+    else:
+        return 0
 
 
 def word_in_sentence(word, sentence):
@@ -95,8 +103,10 @@ def word_in_sentence(word, sentence):
     >>> word_in_sentence("dog", "The cat is sleeping")
     False
     """
-    # TODO: Write your code below
-    pass
+    if word in sentence:
+        return True
+    else:
+        return False
 
 
 def factorial(n):
@@ -112,8 +122,15 @@ def factorial(n):
     >>> factorial(0)
     1
     """
-    # TODO: Write your code below
-    pass
+    
+    if n == 0 or n == 1:
+        return 1
+    else:
+        for i in range(1, n + 1):
+            m = n
+            m *= m * i
+            print(m)
+    return m
 
 
 def remove_duplicates(numbers):
@@ -126,8 +143,11 @@ def remove_duplicates(numbers):
     >>> remove_duplicates([1, 2, 2, 3, 1])
     [1, 2, 3]
     """
-    # TODO: Write your code below
-    pass
+    unique_n = []
+    for n in numbers:
+        if n not in unique_n:
+            unique_n.append(n)
+    return unique_n
 
 
 def fizzbuzz(n):
@@ -143,5 +163,22 @@ def fizzbuzz(n):
     >>> fizzbuzz(5)
     [1, 2, 'Fizz', 4, 'Buzz']
     """
-    # TODO: Write your code below
-    pass
+    l_nums = []
+    count = 1
+    while count < n + 1:
+        # l_nums.append(count)
+        if count % 3 == 0 and count % 5 == 0:
+            l_nums.append("FizzBuzz")
+            count += 1
+        elif count % 3 == 0:
+            l_nums.append("Fizz")
+            count += 1
+        elif count % 5 == 0:
+            l_nums.append("Buzz")
+            count += 1
+        else:
+            l_nums.append(count)
+            count += 1
+    return l_nums
+
+factorial(5)
