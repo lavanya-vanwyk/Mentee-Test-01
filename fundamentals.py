@@ -1,4 +1,3 @@
-import math 
 def add_numbers(a, b):
     """
     Problem 1:
@@ -178,5 +177,3 @@ def fizzbuzz(n):
             l_nums.append(count)
             count += 1
     return l_nums
-
-factorial(3)
