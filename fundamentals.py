@@ -126,11 +126,9 @@ def factorial(n):
     if n == 0 or n == 1:
         return 1
     else:
-        for i in range(1, n + 1):
-            m = n
-            m *= m * i
-            print(m)
-    return m
+        for i in range(1, n):
+            n *= i
+    return n
 
 
 def remove_duplicates(numbers):
@@ -181,4 +179,4 @@ def fizzbuzz(n):
             count += 1
     return l_nums
 
-factorial(5)
+factorial(3)
